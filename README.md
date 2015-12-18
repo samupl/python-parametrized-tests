@@ -14,7 +14,7 @@ This is particularly useful when you have to test a single method/function/class
 
 ```python
 import unittest
-import parametrized
+from parametrized import parametrized_test_case, parametrized
 
 
 @parametrized_test_case
