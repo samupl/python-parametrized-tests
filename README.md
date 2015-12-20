@@ -1,6 +1,8 @@
 # python-parametrized-tests
 A very simple module that allows for parametrized test cases in python.
 
+PyPI: https://pypi.python.org/pypi/parametrized/0.1
+
 ## Usage
 
 In order to use the parametrized module, you have to do two simple things:
