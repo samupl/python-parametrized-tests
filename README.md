@@ -45,6 +45,4 @@ OK
 
 ## TODO:
 
-* Create some unit tests,
-* Make a proper python package,
-* PyPI
+The code allows to alter how the generated test methods will be called, but that's not documented yet.
