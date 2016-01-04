@@ -67,5 +67,38 @@ class ParametrizedDecoratorTestCase(unittest.TestCase):
         self.assertTrue(hasattr(etc, 'test_example_1'))
         self.assertTrue(hasattr(etc, 'test_example_2'))
 
+
+@parametrized.parametrized_test_case
+class ParametrizedDecoratorActuallTestCase(unittest.TestCase):
+    @parametrized.parametrized(args=[
+        (1, 1),
+        (2, 2),
+        (3, 3),
+        ('abc', 'abc'),
+        (1.0, 1.0),
+        (0xfe, 0xfe),
+        (object, object),
+        (str, str),
+        ([], []),
+        ({}, {}),
+        (None, None)
+    ])
+    def equal(self, value1, value2):
+        self.assertEqual(value1, value2)
+
+    @parametrized.parametrized(args=[
+        (1, 2),
+        (2, 3),
+        (3, 4),
+        ('abc', 'abc2'),
+        (1.0, 1.1),
+        (0xfe, 0xfa),
+        (str, int),
+        ([1], [2]),
+        ({1}, {2}),
+    ])
+    def not_equal(self, value1, value2):
+        self.assertNotEqual(value1, value2)
+
 if __name__ == '__main__':
     unittest.main()
