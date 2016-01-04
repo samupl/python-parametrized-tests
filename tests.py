@@ -100,5 +100,21 @@ class ParametrizedDecoratorActuallTestCase(unittest.TestCase):
     def not_equal(self, value1, value2):
         self.assertNotEqual(value1, value2)
 
+    @parametrized.parametrized(args=[
+        1,
+        2,
+        3,
+        'abc',
+        1.0,
+        0xfe,
+        object,
+        str,
+        [],
+        {},
+        None,
+    ])
+    def equal_single_value(self, value):
+        self.assertEqual(value, value)
+
 if __name__ == '__main__':
     unittest.main()

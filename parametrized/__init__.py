@@ -38,9 +38,15 @@ stub test method will be generated, and that
             continue
 
         for i, params in enumerate(attr.parameters):
+            if type(params) not in (list, tuple) or len(params) == 0:
+                params = [params]
+
             def generate_test(base_test_method, args):
                 def test(self):
-                    return base_test_method(self, *args)
+                    try:
+                        return base_test_method(self, *args)
+                    except TypeError:
+                        raise
                 return test
 
             setattr(
