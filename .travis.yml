@@ -13,6 +13,3 @@ script:
 before_script:
   - "pep8 parametrized"
   - pyflakes parametrized
-os:
-  - linux
-  - osx
