@@ -1,4 +1,7 @@
 # python-parametrized-tests
+
+[![Build Status](https://travis-ci.org/samupl/python-parametrized-tests.svg?branch=master)](https://travis-ci.org/samupl/python-parametrized-tests)
+
 A very simple module that allows for parametrized test cases in python.
 
 PyPI: https://pypi.python.org/pypi/parametrized/0.1
